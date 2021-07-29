@@ -11,7 +11,7 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-
+   
 
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='Product', on_delete=models.CASCADE)
