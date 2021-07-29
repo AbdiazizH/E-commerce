@@ -7,3 +7,4 @@ urlpatterns = [
     path('', views.all_products, name='all_products'),  
     
 ]
+   
