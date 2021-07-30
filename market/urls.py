@@ -1,10 +1,11 @@
 from django.urls import path, include
 from . import views
 
-app_name = 'ecommerce'
-  
+
 urlpatterns = [ 
-    path('', views.all_products, name='all_products'),  
-    
+    # path('', views.home, name='all_products'),  
+    path('', views.store, name='all_product'),  
+    path('cart/', views.cart, name="cart"),
+    path('checkout/', views.checkout, name="checkout"),
 ]
      

@@ -1,19 +1,14 @@
 from django.contrib import admin
-from .models import Category, Product
+
 
 
 # Register your models here.
 
-@admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['name', 'slug']
-    prepopulated_fields = {'slug': ('name',)}
 
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    list_display = ['name', 'slug', 'price', 'available', 'created']
-    list_filter = ['available', 'created', 'updated']
-    list_editable = ['price', 'available']
-    prepopulated_fields = {'slug': ('name',)}
-  
+from .models import *
+
+admin.site.register(Customer)
+admin.site.register(Product)
+admin.site.register(Order)
+admin.site.register(OrderItem)
   
